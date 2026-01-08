@@ -1,0 +1,41 @@
+JAVA:
+
+class Solution {
+    public int getSecondLargest(int[] arr) {
+        // code here
+        int max = -1;
+        int second_max = -1;
+        
+        for (int ele : arr) {
+            if (ele > max) {
+                max = ele;
+            }
+        }
+        
+        for (int ele : arr) {
+            if (ele > second_max && ele != max) {
+                second_max = ele;
+            }
+        }
+        
+        return second_max;
+    }
+}
+
+PYHTON:
+
+class Solution:
+    def getSecondLargest(self, arr):
+        # Code Here
+        max = -1
+        second_max = -1;
+        
+        for i in range(len(arr)):
+            if arr[i] > max:
+                max = arr[i]
+                
+        for j in range(len(arr)):
+            if arr[j] > second_max and arr[j] != max:
+                second_max = arr[j]
+                
+        return second_max
