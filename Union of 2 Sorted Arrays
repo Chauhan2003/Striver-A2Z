@@ -1,0 +1,22 @@
+JAVA:
+
+class Solution {
+    public static ArrayList<Integer> findUnion(int a[], int b[]) {
+        ArrayList<Integer> res = new ArrayList<>();
+        Set<Integer> set = new TreeSet<>();
+
+        for (int num : a) {
+            set.add(num);
+        }
+
+        for (int num : b) {
+            set.add(num);
+        }
+
+        for (int key : set) {
+            res.add(key);
+        }
+
+        return res;
+    }
+}
